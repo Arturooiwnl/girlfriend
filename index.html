@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Te Amo, Amor mio!</h1>
+        <img src="imagen.jpg" alt="Imagen Romántica" class="imagen-romantica">
+        <p>Eres lo mejor que me ha pasado. Quiero que sepas que te amo con todo mi corazón ❤️.</p>
+        <button id="shareButton">Compartir este amor</button>
+    </div>
+
+    <script>
+        const shareButton = document.getElementById('shareButton');
+
+        shareButton.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Te Amo',
+                    text: 'Mira esta página que hice solo para ti ❤️',
+                    url: window.location.href,
+                })
+                .then(() => console.log('Compartido con éxito'))
+                .catch((error) => console.log('Error al compartir:', error));
+            } else {
+                alert('La funcionalidad de compartir no está disponible en tu navegador.');
+            }
+        });
+    </script>
+</body>
+</html>
