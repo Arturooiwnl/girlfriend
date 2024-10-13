@@ -1,0 +1,22 @@
+@media (max-width: 490px) {
+    body {
+        color: bisque;
+        background-color: rgba(70, 70, 70, 0.267);
+    }
+
+    .contenedor {
+        display: block;
+        border-radius: 10px;
+        height: 10rem;
+        background-color: rgba(0, 0, 0, 0.192);
+    }
+
+    .buscador {
+        background-color: rgba(0, 0, 0, 0.562);
+        border-radius: 10px;
+        display: block;
+        text-align: center;
+        width: 50%; /* La mitad del tamaño */
+        margin: 0 auto; /* Centra horizontalmente */
+    }
+}

@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
-    background-color: #bebebe;
+    background-color: #f4f4f4;
 }
 
 h1, h2 {
@@ -20,19 +20,6 @@ img.imagen {
     border-radius: 10px;
 }
 
-.rank {
-    display: block;
-    margin: 10px auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade la transición */
-}
-
-.rank img {
-    width: 65%;
-    height: auto;
-    margin-left: 100px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
 .logo {
     display: block;
     margin: 10px auto;
@@ -43,10 +30,6 @@ img.imagen {
 
 .logo:hover {
     transform: scale(1.1); /* Agranda el logo un 10% */
-    /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);  */
-}
-.rank:hover {
-    transform: translateY(50px);/* Agranda el logo un 10% */
     /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);  */
 }
 
@@ -80,8 +63,9 @@ img.imagen {
 }
 
 
+/* Estilo para el botón "ITEMS" y otros botones */
 .dropdown-btn {
-    background-color: #056c83; 
+    background-color: #056c83; /* Color de fondo */
     color: white;
     padding: 16px;
     border: none;
@@ -98,43 +82,43 @@ img.imagen {
     transition: all 0.3s ease;
 }
 
-
+/* Efecto al pasar el mouse por encima */
 .dropdown-btn:hover {
-    box-shadow: 0px 0px 15px 5px rgba(0, 153, 255, 0.8); 
-    transform: translateY(-5px);
-    border: 2px solid #0099FF;
+    box-shadow: 0px 0px 15px 5px rgba(0, 153, 255, 0.8); /* Sombra azul neón */
+    transform: translateY(-5px); /* Levanta ligeramente el botón */
+    /* border: 2px solid #0099FF;  */
 }
 
-
+/* Flecha dentro del botón */
 .dropdown-btn .arrow {
     font-size: 12px;
 }
-
+/* Contenedor de las opciones desplegables */
 .dropdown-container {
-    background-color: #444;
-    border-radius: 10px;
+    /* padding: 10px; */
+    overflow: hidden; /* Oculta contenido fuera de los límites del contenedor */
+    background-color: #444; /* Negro más claro */
+    /* padding-left: 20px; */
+    border-radius: 10px; /* Bordes suaves */
+    max-height: 0; /* Altura inicial cero */
     width: 65%;
     margin-left: 45px;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out; /* Animación de altura */
     text-align: center;
-    max-height: 0; 
-    overflow: hidden; 
 }
-
-
 
 .dropdown-container a {
     padding-left: 10px;
     color: #fff;
     text-decoration: none;
     display: block;
-    overflow: hidden; 
 }
 
 .dropdown-container a:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efecto de levantar */
+    box-shadow: 0px 6px 10px rgba(22, 165, 231, 0.3);
     background-color: #19aec2;
-    border-radius: 50px; /* Bordes suaves */
+    border-radius: 10px; /* Bordes suaves */
     color: #000;
 }
 
@@ -142,17 +126,11 @@ img.imagen {
 .main-content {
     margin-left: 260px;
     padding: 20px;
-    background-color: #dbdbdb;
+    background-color: #fff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     min-height: 100vh;
     box-sizing: border-box;
-}
-
-.main-content img{
-    width: 50%;
-    height: auto;
-    margin-left: 100px;   
 }
 
 .content-box {
@@ -161,12 +139,6 @@ img.imagen {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     /* text-align: center; */
-}
-
-.content-box:hover{
-    box-shadow: 0px 0px 15px 5px rgba(0, 153, 255, 0.8); 
-    transform: translateY(-5px);
-    border: 2px solid #0099FF;
 }
 
 .resaltar-1{
@@ -182,4 +154,3 @@ img.imagen {
     font-size: 16px; /* Tamaño de la flecha */
     color: #fff; /* Color blanco para la flecha */
 }
-
