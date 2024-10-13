@@ -1,4 +1,4 @@
-@media (max-width: 490px) {
+@media (min-width: 430px) {
     body {
         color: bisque;
         background-color: rgba(70, 70, 70, 0.267);
