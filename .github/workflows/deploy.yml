@@ -1,0 +1,36 @@
+name: Deploy PHP to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+
+    - name: Install PHP dependencies (if needed)
+      run: composer install --no-dev --prefer-dist
+
+    - name: Build HTML from PHP
+      run: |
+        mkdir output
+        cp -r * output/
+        php -S localhost:8000 &
+        sleep 5
+        wget -r --directory-prefix=output http://localhost:8000
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./output
