@@ -16,7 +16,7 @@
         border-radius: 10px;
         display: block;
         text-align: center;
-        width: 50%; /* La mitad del tamaño */
-        margin: 0 auto; /* Centra horizontalmente */
+        width: 50%;
+        margin: 0 auto; 
     }
 }
